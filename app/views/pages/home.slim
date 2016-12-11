@@ -1,0 +1,36 @@
+.pure-g.main-window
+  .pure-u-1-4.left-panel
+    .left-panel-container
+      .pure-u-1-1
+        h1 Focus Reader
+      .pure-u-1-1
+        textarea#input-text-area placeholder="Enter text here..."
+      .pure-u-1-1
+        span Max chunk length:
+        input#input-max-chunk.input-option size="5" value="12"
+      .pure-u-1-1
+        span Words per minute:
+        input#input-wpm.input-option size="5" value="600"
+      .pure-u-1-1.bottom
+        .pure-u-1-1
+          .label Text colour:
+          input#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="FFFFCC"
+        .pure-u-1-1
+          .label Background colour:
+          input#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="663333"
+      .pure-u-1-1.start-row
+        button#btn-start.pure-button start
+  .pure-u-3-4.reader-area
+    #reader
+      | Enter text and press start.
+    .pure-u-1-1
+      button#btn-play-pause.pure-button.hidden Pause
+
+
+javascript:
+
+  $('#btn-start').on("click", start);
+  $('#btn-play-pause').on("click", playPause);
+
+  updateTextColor();
+  updateBackgroundColor();

@@ -1,0 +1,58 @@
+.left-panel {
+  position: relative;
+  background-color: #FAFAFA;
+
+  .left-panel-container {
+    margin: 10px;
+  }
+
+  #input-text-area {
+    height: 300px;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+  }
+
+  .input-option {
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+
+  .start-row {
+    position: relative;
+    margin-top: 30px;
+
+    & > * {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  #btn-start {
+
+  }
+}
+
+
+.reader-area {
+  position: relative;
+
+  #reader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: garamond, serif;
+  }
+
+  #btn-play-pause {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+  }
+}
