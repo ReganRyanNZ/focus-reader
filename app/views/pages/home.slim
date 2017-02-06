@@ -7,17 +7,17 @@
         textarea#input-text-area placeholder="Enter text here..."
       .pure-u-1-1
         span Max chunk length:
-        input#input-max-chunk.input-option size="5" value="12"
+        input#input-max-chunk.input-option size="5" value="14"
       .pure-u-1-1
         span Words per minute:
-        input#input-wpm.input-option size="5" value="600"
+        input#input-wpm.input-option size="5" value="800"
       .pure-u-1-1.bottom
         .pure-u-1-1
           .label Text colour:
-          input#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="F2F2A2"
+          input#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="FFFFB8"
         .pure-u-1-1
           .label Background colour:
-          input#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="613A30"
+          input#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="542006"
       .pure-u-1-1.start-row
         button#btn-start.pure-button start
   .pure-u-3-4.reader-area
@@ -31,6 +31,21 @@ javascript:
 
   $('#btn-start').on("click", start);
   $('#btn-play-pause').on("click", playPause);
+
+  $(document).on("keydown", function (e) {
+      switch(e.which) {
+        case 32: // space
+          playPause();
+          break;
+        case 37: // left
+          moveBack();
+          break;
+        case 39: // right
+          moveForward();
+          break;
+      }
+  });
+
 
   updateTextColor();
   updateBackgroundColor();

@@ -32,8 +32,12 @@ function start() {
   play();
 }
 
+function printBlock() {
+  $('#reader').text(text[playBlockIndex]);
+}
+
 function loop() {
-  $('#reader').text(text[playBlockIndex]); // show next line
+  printBlock(); // show next line
 
   timer = setTimeout(function(){
     if(indexInBounds(playBlockIndex+1)) {
@@ -64,6 +68,14 @@ function pause() {
     clearTimeout(timer);
     timer = 0;
   }
+}
+function moveForward() {
+  playBlockIndex = Math.min( (playBlockIndex+1), playMaxIndex )
+  printBlock();
+}
+function moveBack() {
+  playBlockIndex = Math.max( (playBlockIndex-1), 0 )
+  printBlock();
 }
 function restartIndex() {
   playBlockIndex = 0;
