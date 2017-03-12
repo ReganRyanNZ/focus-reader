@@ -33,9 +33,14 @@ javascript:
   $('#btn-play-pause').on("click", playPause);
 
   $(document).on("keydown", function (e) {
+    var textFocus = $('#input-text-area').is(':focus');
+    if(textFocus){
+        // Nothing to see here
+    } else {
       switch(e.which) {
         case 32: // space
           playPause();
+          return false;
           break;
         case 37: // left
           moveBack();
@@ -44,6 +49,7 @@ javascript:
           moveForward();
           break;
       }
+    }
   });
 
 
