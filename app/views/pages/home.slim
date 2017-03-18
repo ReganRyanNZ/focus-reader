@@ -1,28 +1,33 @@
 .pure-g.main-window
-  .pure-u-1-4.left-panel
-    .left-panel-container
-      .pure-u-1-1
-        h1 Focus Reader
-      .pure-u-1-1
-        textarea#input-text-area placeholder="Enter text here..."
-      .pure-u-1-1
-        span Max chunk length:
-        input#input-max-chunk.input-option size="5" value="14"
-      .pure-u-1-1
-        span Words per minute:
-        input#input-wpm.input-option size="5" value="800"
-      .pure-u-1-1.bottom
-        .pure-u-1-1
-          .label Text colour:
-          input#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="FFFFB8"
-        .pure-u-1-1
-          .label Background colour:
-          input#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="542006"
-      .pure-u-1-1.start-row
-        button#btn-start.pure-button start
-  .pure-u-3-4.reader-area
+  .left-panel-container
+    .pure-u-1-1
+      h1 Focus Reader
+    .pure-u-1-1
+      textarea#input-text-area placeholder="Paste text here..."
+    .pure-u-1-1.settings-container
+      span Max chunk length:
+      input#input-max-chunk.input-option size="5" value="12"
+    .pure-u-1-1.settings-container
+      span Words per minute:
+      input#input-wpm.input-option size="5" value="600"
+    .pure-u-1-1.bottom
+      .pure-u-1-1.settings-container
+        .label Text colour:
+        input.color#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="F7DC83"
+      .pure-u-1-1.settings-container
+        .label Background colour:
+        input.color#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="4D1D05"
+    .pure-u-1-1.start-row
+      button#btn-start.pure-button start
+  .reader-area
     #reader
       | Enter text and press start.
+      br
+      br
+      | Press Space to play/pause
+      br
+      br
+      | Press ← and → to go forward and backwards
     .pure-u-1-1
       button#btn-play-pause.pure-button.hidden Pause
 

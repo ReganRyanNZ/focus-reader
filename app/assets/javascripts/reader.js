@@ -6,7 +6,7 @@ var text,
     timer,
     isPlaying = false;
 
-var testText = "This is a test string (you didn't add any text!). The words for 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10 are: one, two, three, four, five, six, seven, eight, nine and ten. The words for 11, 12, 13, 14, 15, 16, 17, 18, 19 and 20 are: eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen and twenty.";
+var testText = "Sample text. The wind was a torrent of darkness among the gusty trees. The moon was a ghostly galleon tossed upon cloudy seas. The road was a ribbon of moonlight over the purple moor, And the highwayman came riding, Riding, riding, The highwayman came riding, up to the old inn-door."
 
 function start() {
   $('#btn-play-pause').removeClass('hidden');

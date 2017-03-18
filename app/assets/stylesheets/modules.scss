@@ -1,21 +1,15 @@
-.left-panel {
+.left-panel-container {
   position: relative;
-  background-color: #f1f0f0;
-
-  .left-panel-container {
-    margin: 10px;
-  }
+  background-color: #d0ccc7;
+  padding: 10px;
+  width: 220px;
 
   #input-text-area {
     height: 300px;
     width: 100%;
     resize: none;
     box-sizing: border-box;
-  }
-
-  .input-option {
-    margin-left: 20px;
-    margin-bottom: 5px;
+    background-color: #f5eae2;
   }
 
   .start-row {
@@ -29,21 +23,53 @@
     }
   }
 
+  .settings-container {
+      margin-top: 5px;
+      padding-top: 5px;
+      position: relative;
+
+      div {
+        display: inline-block;
+      }
+      input {
+        display: inline-block;
+        position: absolute;
+        left: 156px;
+        width: 60px;
+        border: none;
+        border-radius: 3px;
+      }
+      input.color {
+        height: 20px;
+      }
+
+      input.input-option {
+        background-color: #f5eae2;
+        width: 30px;
+      }
+  }
+
   #btn-start {
-    width: 80%;
+    width: 90%;
+    height: 60px;
+    background-color: #afacaa;
   }
 }
 
 
 .reader-area {
-  position: relative;
-
+  position: absolute;
+  left: 240px;
+  width: calc(100% - 240px);
+  height: 100%;
   #reader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 85%;
     text-align: center;
+    letter-spacing: 0em;
     font-family: arial, sans-serif;
     font-size: 16px;
 
