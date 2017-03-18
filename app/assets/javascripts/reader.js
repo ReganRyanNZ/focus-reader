@@ -70,12 +70,12 @@ function pause() {
   }
 }
 function moveForward() {
-  isPlaying = false;
+  pause();
   playBlockIndex = Math.min( (playBlockIndex+1), playMaxIndex )
   printBlock();
 }
 function moveBack() {
-  isPlaying = false;
+  pause();
   playBlockIndex = Math.max( (playBlockIndex-1), 0 )
   printBlock();
 }
