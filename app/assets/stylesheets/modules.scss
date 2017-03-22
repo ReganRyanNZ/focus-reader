@@ -9,6 +9,7 @@ $left-panel-input-bg-color: #39414e;
   #input-text-area {
     height: 300px;
     width: 100%;
+    padding: 8px;
     resize: none;
     box-sizing: border-box;
     border-color: $left-panel-font-color;
@@ -32,7 +33,7 @@ $left-panel-input-bg-color: #39414e;
   }
 
   .color-container {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .settings-container {
@@ -54,7 +55,10 @@ $left-panel-input-bg-color: #39414e;
       .label {
         width: 100%;
         text-align: center;
+        margin-bottom: 4px;
+
       }
+
       input.color {
         height: 49px;
         width: 90%;
@@ -67,6 +71,9 @@ $left-panel-input-bg-color: #39414e;
       input.input-option {
         background-color: $left-panel-input-bg-color;
         width: 30px;
+        padding: 2px;
+        top: -50%;
+        transform: translateY(50%);
       }
   }
 
