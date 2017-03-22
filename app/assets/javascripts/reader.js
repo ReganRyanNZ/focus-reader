@@ -6,7 +6,7 @@ var text,
     timer,
     isPlaying = false;
 
-var testText = "Sample text. The wind was a torrent of darkness among the gusty trees. The moon was a ghostly galleon tossed upon cloudy seas. The road was a ribbon of moonlight over the purple moor, And the highwayman came riding, Riding, riding, The highwayman came riding, up to the old inn-door. He’d a French cocked-hat on his forehead, a bunch of lace at his chin, A coat of the claret velvet, and breeches of brown doe-skin. They fitted with never a wrinkle. His boots were up to the thigh.And he rode with a jewelled twinkle, His pistol butts a-twinkle, His rapier hilt a-twinkle, under the jewelled sky. Over the cobbles he clattered and clashed in the dark inn-yard. He tapped with his whip on the shutters, but all was locked and barred.He whistled a tune to the window, and who should be waiting thereBut the landlord’s black-eyed daughter, Bess, the landlord’s daughter, Plaiting a dark red love-knot into her long black hair."
+var testText = "Sample text. The wind was a torrent of darkness among the gusty trees. The moon was a ghostly galleon tossed upon cloudy seas. The road was a ribbon of moonlight over the purple moor, And the highwayman came riding, Riding, riding, The highwayman came riding, up to the old inn-door. He’d a French cocked-hat on his forehead, a bunch of lace at his chin, A coat of the claret velvet, and breeches of brown doe-skin. They fitted with never a wrinkle. His boots were up to the thigh.And he rode with a jewelled twinkle, His pistol butts a-twinkle, His rapier hilt a-twinkle, under the jewelled sky. Over the cobbles he clattered and clashed in the dark inn-yard. He tapped with his whip on the shutters, but all was locked and barred.He whistled a tune to the window, and who should be waiting there. But the landlord’s black-eyed daughter, Bess, the landlord’s daughter, Plaiting a dark red love-knot into her long black hair."
 
 function start() {
   $('#btn-play-pause').removeClass('hidden');
@@ -45,6 +45,7 @@ function loop() {
       loop();
     } else {
       // stop loop
+      $('#btn-play-pause').addClass('hidden');
     }
   }, waitLength);
 }

@@ -1,7 +1,7 @@
 .pure-g.main-window
   .left-panel-container
     .pure-u-1-1
-      h1 Focus Reader
+      h1#logo Focus Reader
     .pure-u-1-1
       textarea#input-text-area placeholder="Paste text here..."
     .pure-u-1-1.settings-container
@@ -10,13 +10,13 @@
     .pure-u-1-1.settings-container
       span Words per minute:
       input#input-wpm.input-option size="5" value="600"
-    .pure-u-1-1.bottom
-      .pure-u-1-1.settings-container
-        .label Text colour:
-        input.color#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="F7DC83"
-      .pure-u-1-1.settings-container
-        .label Background colour:
-        input.color#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="4D1D05"
+    .pure-u-1-1.color-container
+      .pure-u-1-2.settings-container
+        .label Text
+        input.color#color-txt class="jscolor {onFineChange:'updateTextColor(this)'}" value="F2F3F7"
+      .pure-u-1-2.settings-container
+        .label Background
+        input.color#color-bg class="jscolor {onFineChange:'updateBackgroundColor(this)'}" value="00232B"
     .pure-u-1-1.start-row
       button#btn-start.pure-button start
   .reader-area

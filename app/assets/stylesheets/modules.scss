@@ -1,15 +1,23 @@
+$left-panel-font-color: #fbfbfb;
+$left-panel-input-bg-color: #39414e;
 .left-panel-container {
   position: relative;
-  background-color: #d0ccc7;
+  background-color: $left-panel-input-bg-color;
   padding: 10px;
-  width: 220px;
+  width: 240px;
 
   #input-text-area {
     height: 300px;
     width: 100%;
     resize: none;
     box-sizing: border-box;
-    background-color: #f5eae2;
+    border-color: $left-panel-font-color;
+    border-radius: 6px;
+    background-color: $left-panel-input-bg-color;
+    color: $left-panel-font-color;
+    &::placeholder {
+      color: $left-panel-font-color;
+    }
   }
 
   .start-row {
@@ -21,6 +29,10 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  .color-container {
+    margin-top: 10px;
   }
 
   .settings-container {
@@ -36,15 +48,24 @@
         position: absolute;
         left: 156px;
         width: 60px;
-        border: none;
+        border: 1px solid $left-panel-font-color;
         border-radius: 3px;
       }
+      .label {
+        width: 100%;
+        text-align: center;
+      }
       input.color {
-        height: 20px;
+        height: 49px;
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+        display: block;
+        position: static;
       }
 
       input.input-option {
-        background-color: #f5eae2;
+        background-color: $left-panel-input-bg-color;
         width: 30px;
       }
   }
@@ -52,10 +73,15 @@
   #btn-start {
     width: 90%;
     height: 60px;
-    background-color: #afacaa;
+    background-color: #d2ecff;
   }
 }
 
+h1#logo {
+  margin-bottom: 20px;
+  margin-top: 7px;
+  text-align: center;
+}
 
 .reader-area {
   position: absolute;
