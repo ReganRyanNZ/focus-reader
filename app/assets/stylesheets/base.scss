@@ -1,6 +1,6 @@
 $min-usable-width: 600px;
 
-body, html, .main-window {
+body, html, #main-window {
   height: 100%;
   background-color: black;
   color: #fbfbfb;
@@ -22,7 +22,7 @@ body, html, .main-window {
   }
 }
 
-.main-window {
+#main-window {
   @media screen and (max-width: $min-usable-width) {
     display: none;
   }
